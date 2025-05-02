@@ -1,43 +1,42 @@
 import 'package:flutter/material.dart';
+import 'package:act6_1062/pantallainicial.dart';
+import 'package:act6_1062/pantalla_uno.dart';
+import 'package:act6_1062/pantalla_dos.dart';
+import 'package:act6_1062/pantalla_tres.dart';
+import 'package:act6_1062/pantalla_cuatro.dart';
+import 'package:act6_1062/pantalla_cinco.dart';
+import 'package:act6_1062/pantalla_seis.dart';
+import 'package:act6_1062/pantalla_siete.dart';
+import 'package:act6_1062/pantalla_ocho.dart';
+import 'package:act6_1062/pantalla_9.dart';
+import 'package:act6_1062/pantalla_10.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MiRutas());
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-  // This widget is the root of your application.
+class MiRutas extends StatelessWidget {
+  const MiRutas({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // Application name
-      title: 'Flutter Hello World',
-      // Application theme data, you can set the colors for the application as
-      // you want
-      theme: ThemeData(
-        // useMaterial3: false,
-        primarySwatch: Colors.blue,
-      ),
-      // A widget which will be started on application startup
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  final String title;
-  const MyHomePage({super.key, required this.title});  
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        // The title text which will be shown on the action bar
-        title: Text(title),
-      ),
-      body: Center(
-        child: Text(
-          'Hello, World!',
-        ),
-      ),
+      debugShowCheckedModeBanner: false,
+      title: 'Rutas entre paginas',
+      initialRoute: '/',
+      routes: {
+        // When navigating to the "/" route, build the FirstScreen widget.
+        '/': (context) => const Pantalla0(),
+        // When navigating to the "/second" route, build the SecondScreen widget.
+        '/Widget021': (context) => const Widget021(),
+        '/Widget022': (context) => const Widget022(),
+        '/Widget023': (context) => const Widget023(),
+        '/Widget024': (context) => const Widget024(),
+        '/Widget025': (context) => const Widget025(),
+        '/Widget026': (context) => const Widget026(),
+        '/Widget027': (context) => const Widget027(),
+        '/Widget028': (context) => const Widget028(),
+        '/Widget029': (context) => const Widget029(),
+        '/Widget030': (context) => const Widget030(),
+      },
     );
   }
 }
